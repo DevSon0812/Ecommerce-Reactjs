@@ -1,0 +1,116 @@
+.cart {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+  width: 100%;
+  padding: 64px 60px;
+  max-width: 550px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  right: 0;
+  transition: all 0.2s ease;
+  transform: translateX(100%);
+  @include laptop {
+    padding: 40px 20px;
+  }
+  &.openBagCart {
+    transform: translateX(0);
+  }
+  &-root {
+    position: relative;
+  }
+
+  &-box {
+    @include flex-center-ver;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+  &-title {
+    font-size: $font-size-xLarge;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    @include laptop {
+      font-size: $font-size-medium;
+    }
+  }
+  &-group {
+  }
+  &-ship {
+    padding-top: 24px;
+    border-top: 1px solid rgb(110, 110, 110);
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    text-transform: capitalize;
+  }
+  &-product {
+    @include flex-center-ver;
+    padding-block: 24px;
+    border-bottom: 1px solid #ccc;
+    gap: 16px;
+  }
+  &-img {
+    width: 107px;
+    height: 143px;
+  }
+  &-desc {
+    font-size: $font-size-base;
+    line-height: calc($leading-6 - 4px);
+  }
+  &-name {
+  }
+  &-decription {
+    margin-block: 6px;
+    color: rgb(110, 110, 110);
+  }
+  &-price {
+    @include flex-center-ver;
+    margin-block: 6px;
+    gap: 10px;
+    & del {
+      color: rgb(110, 110, 110);
+    }
+  }
+  &-size {
+    margin-block: 4px 16px;
+    @include flex-center-ver;
+    gap: 30px;
+  }
+  &-subtotal {
+    & p {
+      @include flex-center-ver;
+      gap: 10px;
+      & span {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+  &-total {
+    border-top: 1px solid #ccc;
+    padding-top: 24px;
+    position: fixed;
+    max-width: 450px;
+    width: 100%;
+    bottom: 30px;
+    @include table {
+      max-width: 90%;
+    }
+    &-title {
+      @include flex-center-ver;
+      justify-content: space-between;
+      & span {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+  &-btn {
+    text-align: center;
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #070b21;
+    & a {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
