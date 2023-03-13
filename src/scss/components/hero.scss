@@ -1,10 +1,12 @@
 .hero {
   &-img {
-    margin-top: 115px;
+    @include laptop {
+      margin-top: 0;
+    }
     position: relative;
-    & img {
+    & > img {
       height: 864px;
-      @include table {
+      @include laptop {
         height: 550px;
       }
     }
@@ -16,8 +18,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    @include table {
-      top: 52%;
+    @include laptop {
+      top: 45%;
     }
   }
   &-title {
@@ -33,8 +35,8 @@
     @include table {
       width: 100%;
       text-align: center;
-      font-size: $font-size-3xl;
-      letter-spacing: normal;
+      font-size: $font-size-2xl;
+      letter-spacing: 5px;
     }
   }
   &-content {
@@ -62,7 +64,7 @@
     background: rgb(255, 255, 255);
     border-radius: $rounded-sm;
     @include transition;
-    @include table {
+    @include laptop {
       font-size: $font-size-base;
       display: inline-block;
 

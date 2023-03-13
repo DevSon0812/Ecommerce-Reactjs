@@ -19,7 +19,7 @@ const displayImg = [
     image: `${imageTrending1}`,
     title: "Learn into the losse look",
     content: "Sk8er style",
-    btnPath: "Shop Men",
+    btnPath: "Shop Womnen",
     path: "/",
   },
   {
@@ -27,7 +27,7 @@ const displayImg = [
     image: `${imageTrending2}`,
     title: "Learn into the losse look",
     content: "Sk8er style",
-    btnPath: "Shop Men",
+    btnPath: "Shop Accessories",
     path: "/",
   },
   {
@@ -35,7 +35,7 @@ const displayImg = [
     image: `${imageTrending3}`,
     title: "Learn into the losse look",
     content: "Sk8er style",
-    btnPath: "Shop Men",
+    btnPath: "Shop Kids",
     path: "/",
   },
 ];

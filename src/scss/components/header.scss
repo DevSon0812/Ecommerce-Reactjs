@@ -2,6 +2,7 @@
   @include flex-center-ver;
   justify-content: space-between;
   padding-block: 12px;
+
   &-group {
     position: fixed;
     top: 0;
@@ -9,26 +10,31 @@
     right: 0;
     z-index: 1000;
     background-color: #fff;
+    @include laptop {
+      display: none;
+    }
   }
   &-item {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 13%;
+    width: 15%;
     font-size: $font-size-medium;
     line-height: $leading-6;
-    color: #fff !important;
     padding: 8px 20px;
+    color: #fff !important;
     background-color: #bb0000;
     text-transform: uppercase;
     font-weight: $font-weight-Extrabold;
 
     @include laptop {
-      width: 26%;
+      width: 16%;
+      font-size: $font-size-base;
+      padding: 4px;
     }
 
-    @include mobile {
-      width: 38%;
+    @include table {
+      width: 31%;
     }
   }
   &-icon {

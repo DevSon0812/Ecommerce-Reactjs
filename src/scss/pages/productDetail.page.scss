@@ -1,0 +1,185 @@
+.page {
+  &-detail-group {
+    margin-block: 120px;
+    @include flex-col;
+  }
+  &-detail-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &-detail-primary {
+    display: flex;
+    align-items: flex-start;
+  }
+  &-detail-img-small {
+    @include flex-col;
+    gap: 32px;
+    & div {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  &-detail-img {
+    width: 675px;
+    height: 738px;
+  }
+  &-detail-secound {
+    width: 100%;
+  }
+  &-detail-desc {
+    @include flex-col;
+  }
+  &-detail-trademark {
+  }
+  &-detail-name {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: calc($leading-6 - 4px);
+    font-size: $font-size-xLarge;
+    letter-spacing: 0.02em;
+    font-weight: $font-weight-bold;
+    margin-block: 9px;
+  }
+  &-detail-price {
+    font-size: $font-size-xLarge;
+    line-height: calc($leading-6 + 4px);
+    font-weight: $font-weight-bold;
+    padding-bottom: 9px;
+  }
+  &-detail-sale {
+    font-size: $font-size-base;
+    line-height: calc($leading-6 - 4px);
+    color: #c41320;
+    margin-bottom: 16px;
+  }
+  &-detail-size {
+    @include flex-col;
+    font-size: $font-size-base;
+    line-height: calc($leading-6 - 4px);
+    font-weight: $font-weight-bold;
+    gap: 14px;
+    padding-block: 30px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &-detail-size-lists {
+    @include flex-center-ver;
+    gap: 8px;
+    & button {
+      cursor: pointer;
+      background-color: #fff;
+      text-transform: uppercase;
+      justify-content: center;
+      text-align: center;
+      font-size: $font-size-small;
+      line-height: calc($leading-6 - 4px);
+      padding: 4px;
+      width: 30px;
+      border-radius: $rounded-md;
+      height: 30px;
+      transition: all 0.3s ease-out;
+      &:hover {
+        background-color: rgb(224, 219, 219);
+      }
+    }
+  }
+  &-detail-payment {
+    padding-top: 30px;
+    padding-bottom: 22px;
+    @include flex-center-ver;
+    gap: 22px;
+  }
+  &-detail-item {
+    width: calc(100% / 2 - 22px);
+    border: 2px solid #000;
+    padding: 16px 18px;
+    text-align: left;
+    border-radius: $rounded-md;
+    line-height: calc($leading-6 - 4px);
+    & p {
+      color: rgb(0, 0, 0);
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      margin-bottom: 4px;
+    }
+    & span {
+      font-size: $font-size-small;
+      color: rgb(110, 110, 110);
+    }
+  }
+  &-detail-btn {
+    @include flex-center-ver;
+    gap: 16px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &-detail-btn-items {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    background-color: rgb(7, 11, 33);
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 12px 16px;
+    transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    height: 100%;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &-detail-qty {
+    @include flex-center-ver;
+    gap: 8px;
+    & div {
+      cursor: pointer;
+      @include flex-center-ver;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &-detail-bottom {
+    padding-block: 32px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &-detail-description {
+    margin-top: 65px;
+    display: flex;
+    align-items: flex-start;
+    gap: 246px;
+  }
+  &-detail-description-primary {
+    margin-left: 100px;
+    width: 100%;
+    max-width: 540px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &-detail-description-seound {
+    width: 30%;
+  }
+  &-detail-description-items {
+    margin-bottom: 20px;
+    & h6 {
+      font-size: $font-size-medium;
+      font-weight: $font-weight-bold;
+      line-height: $leading-6;
+      margin-bottom: 9px;
+    }
+    & ul > li {
+      list-style: unset;
+      font-size: $font-size-base;
+      line-height: $leading-6;
+      color: rgb(110, 110, 110);
+    }
+  }
+}

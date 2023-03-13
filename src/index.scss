@@ -1,8 +1,8 @@
+@import "./scss/base/reset.scss";
 @import "../src/scss/abstracts/mixins";
 @import "../src/scss/abstracts/variable";
-
-@import "./scss/base/reset.scss";
 @import "./scss/base/global.scss";
+
 @import "./scss/components/header.scss";
 @import "./scss/components/hero.scss";
 @import "./scss/components/trending.scss";
@@ -10,5 +10,8 @@
 @import "./scss/components/cart.scss";
 @import "./scss/components/contact.scss";
 @import "./scss/components/footer.scss";
+@import "./scss/components/header-mobile.scss";
 
 @import "./scss/pages/home.scss";
+@import "./scss/pages/products.page.scss";
+@import "./scss/pages/productDetail.page.scss";

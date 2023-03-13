@@ -2,7 +2,6 @@
   &-list {
     overflow: hidden;
     width: 100%;
-    scroll-snap-type: x mandatory;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -20,7 +19,6 @@
   overflow: hidden;
   cursor: pointer;
   @include flex-col;
-  gap: 10px;
   width: calc(100% / 6 - 32px);
   @include laptop {
     width: calc(100% / 4 - 32px);
@@ -34,6 +32,7 @@
   flex: none;
   scroll-snap-align: start;
   &-img {
+    margin-bottom: 10px;
   }
   &-desc {
     font-size: $font-size-medium;

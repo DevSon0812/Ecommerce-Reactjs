@@ -1,7 +1,13 @@
 import React from "react";
 
-const Logo = () => {
-  return <h1 className="header-item">SonKhan's</h1>;
+const Logo = ({ className }) => {
+  return (
+    <h1>
+      <a href="/" className={`header-item ${className}`}>
+        SonKhan's
+      </a>
+    </h1>
+  );
 };
 
 export default Logo;

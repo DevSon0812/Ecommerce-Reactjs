@@ -20,12 +20,16 @@ img {
   height: 100%;
   object-fit: cover;
 }
-
+button {
+  outline: none;
+  border: none;
+}
 body {
   font-family: $font-family-secound;
 }
 
 #root {
+  position: relative;
   overflow: hidden;
 }
 
@@ -75,5 +79,27 @@ body {
   font-family: $font-family-base;
   @include table {
     font-size: $font-size-xLarge;
+  }
+}
+
+.txt-red {
+  color: #c41420 !important;
+}
+
+.dislay {
+  display: none !important;
+  @include laptop {
+    display: flex !important;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(100, 100, 111, 0.2);
+  z-index: 1000;
+  display: none;
+  &.open-Overlay {
+    display: initial;
   }
 }
