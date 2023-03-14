@@ -20,7 +20,7 @@ const Cart = ({ open, onClose }) => {
             </div>
             <div className="cart-desc">
               <p className="cart-name">Golden Designers Mug</p>
-              <p className="cart-decription">Golden Designers Mug</p>
+              <p className="cart-decription">Odeon - Medium Wash</p>
               <p className="cart-price">
                 $25.09 <del>89.50</del>
               </p>

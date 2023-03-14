@@ -5,6 +5,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { CgSearch } from "react-icons/cg";
 import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { ROUTES } from "./../utils/routes";
 
 const HeaderMobile = ({ onOpen }) => {
   const [openNav, SetOpenNav] = useState(false);
@@ -42,28 +43,28 @@ const HeaderMobile = ({ onOpen }) => {
           </div>
           <ul className="header-mb-menu">
             <li>
-              <a href="/" className="txt-red">
+              <a href={ROUTES.PRODUCT} className="txt-red">
                 New arrivals
               </a>
             </li>
 
             <li>
-              <a href="/">Men</a>
+              <a href={ROUTES.PRODUCT}>Men</a>
             </li>
             <li>
-              <a href="/">Woman</a>
+              <a href={ROUTES.PRODUCT}>Woman</a>
             </li>
             <li>
-              <a href="/">Kids</a>
+              <a href={ROUTES.PRODUCT}>Kids</a>
             </li>
             <li>
-              <a href="/">Accessories</a>
+              <a href={ROUTES.PRODUCT}>Accessories</a>
             </li>
             <li>
-              <a href="/">Collections</a>
+              <a href={ROUTES.PRODUCT}>Collections</a>
             </li>
             <li>
-              <a href="/" className="txt-red">
+              <a href={ROUTES.PRODUCT} className="txt-red">
                 Sale - extra 40% off
               </a>
             </li>

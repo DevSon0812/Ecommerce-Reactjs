@@ -90,6 +90,7 @@ body {
   display: none !important;
   @include laptop {
     display: flex !important;
+    border-bottom: 1px solid #e6e6e6;
   }
 }
 

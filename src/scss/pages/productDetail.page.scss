@@ -269,6 +269,10 @@
       padding-left: 60px;
       gap: 30;
     }
+    @include mobile {
+      padding-left: 30px;
+      gap: 30;
+    }
   }
   &-detail-description-primary {
     width: 100%;

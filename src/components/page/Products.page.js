@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BsFilterLeft } from "react-icons/bs";
+
 import Sidebar from "../Sidebar";
 import TypeProducts from "./../TypeProducts";
 import imgSrc from "../../assets/img/pd1.avif";
@@ -18,7 +20,13 @@ const ProductsPage = () => {
       <TypeProducts />
       <div className="product-page-box container">
         <div className="product-page-hero">
-          <p onClick={handleOpenSidebar}>Filter</p>
+          <p
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+            onClick={handleOpenSidebar}
+          >
+            <BsFilterLeft size={20} />
+            Filter
+          </p>
           <span>622 items</span>
         </div>
         <div className="product-page-secound">
