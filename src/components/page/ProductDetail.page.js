@@ -1,27 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import imgDetail from "../../assets/img/detail0.avif";
+import imgDetail2 from "../../assets/img/pd2.avif";
+import Styles from "./../Styles";
+
+const displaySize = [
+  {
+    id: 1,
+    display: "xs",
+  },
+  {
+    id: 2,
+    display: "s",
+  },
+  {
+    id: 3,
+    display: "m",
+  },
+  {
+    id: 4,
+    display: "l",
+  },
+  {
+    id: 5,
+    display: "xl",
+  },
+];
 
 const ProductDetail = () => {
+  const [activeItemId, setActiveItemId] = useState(null);
+  // const [activeImgId, setActiveImg] = useState(1);
+
+  const handleItemClick = (itemId) => {
+    setActiveItemId(itemId);
+  };
+  // const hanldeItemClick = (itemId) => {
+  //   setActiveImg(itemId);
+  // };
   return (
     <section className="page-detail-group container">
       <div className="page-detail-box">
         <div className="page-detail-primary">
           <div className="page-detail-img-small">
             <div>
-              <img src={imgDetail} alt="" />
+              <img src={imgDetail2} alt="" />
             </div>
             <div>
-              <img src={imgDetail} alt="" />
+              <img src={imgDetail2} alt="" />
             </div>
             <div>
-              <img src={imgDetail} alt="" />
+              <img src={imgDetail2} alt="" />
             </div>
             <div>
-              <img src={imgDetail} alt="" />
+              <img src={imgDetail2} alt="" />
             </div>
           </div>
           <div className="page-detail-img">
             <img src={imgDetail} alt="" />
+            <img src={imgDetail2} alt="" />
           </div>
         </div>
         <div className="page-detail-secound">
@@ -33,11 +68,15 @@ const ProductDetail = () => {
             <div className="page-detail-size">
               <h6>Size</h6>
               <div className="page-detail-size-lists">
-                <button>xs</button>
-                <button>s</button>
-                <button>m</button>
-                <button>l</button>
-                <button>xl</button>
+                {displaySize.map((item) => (
+                  <button
+                    key={item.id}
+                    className={activeItemId === item.id ? "active-size" : ""}
+                    onClick={() => handleItemClick(item.id)}
+                  >
+                    {item.display}
+                  </button>
+                ))}
               </div>
             </div>
             <div className="page-detail-payment">
@@ -92,6 +131,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+      <Styles />
     </section>
   );
 };
