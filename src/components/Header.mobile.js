@@ -43,30 +43,30 @@ const HeaderMobile = ({ onOpen }) => {
           </div>
           <ul className="header-mb-menu">
             <li>
-              <a href={ROUTES.PRODUCT} className="txt-red">
+              <Link to={ROUTES.PRODUCT} className="txt-red">
                 New arrivals
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href={ROUTES.PRODUCT}>Men</a>
+              <Link to={ROUTES.PRODUCT}>Men</Link>
             </li>
             <li>
-              <a href={ROUTES.PRODUCT}>Woman</a>
+              <Link to={ROUTES.PRODUCT}>Woman</Link>
             </li>
             <li>
-              <a href={ROUTES.PRODUCT}>Kids</a>
+              <Link to={ROUTES.PRODUCT}>Kids</Link>
             </li>
             <li>
-              <a href={ROUTES.PRODUCT}>Accessories</a>
+              <Link to={ROUTES.PRODUCT}>Accessories</Link>
             </li>
             <li>
-              <a href={ROUTES.PRODUCT}>Collections</a>
+              <Link to={ROUTES.PRODUCT}>Collections</Link>
             </li>
             <li>
-              <a href={ROUTES.PRODUCT} className="txt-red">
+              <Link to={ROUTES.PRODUCT} className="txt-red">
                 Sale - extra 40% off
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="button-box header-mb-bottom">

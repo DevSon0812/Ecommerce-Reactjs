@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const displayNav = [
   {
@@ -23,9 +24,9 @@ const Navbar = () => {
     <ul className="nav margin-right">
       {displayNav.map((item) => (
         <li className="nav-item" key={item.id}>
-          <a href={item.path} className="nav-link">
+          <Link to={item.path} className="nav-link">
             {item.display}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
