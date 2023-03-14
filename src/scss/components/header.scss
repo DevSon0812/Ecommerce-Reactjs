@@ -30,7 +30,7 @@
     @include laptop {
       width: 16%;
       font-size: $font-size-base;
-      padding: 4px;
+      padding: 10px;
     }
 
     @include table {

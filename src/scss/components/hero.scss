@@ -1,9 +1,9 @@
 .hero {
   &-img {
-    @include laptop {
-      margin-top: 0;
-    }
     position: relative;
+    @include laptop {
+      margin-top: 0px;
+    }
     & > img {
       height: 864px;
       @include laptop {
@@ -13,13 +13,13 @@
   }
   &-decs {
     position: absolute;
-    top: 65%;
+    top: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
     @include laptop {
-      top: 45%;
+      top: 5.6%;
     }
   }
   &-title {
