@@ -65,10 +65,8 @@
 
 .product {
   &-page-box {
-    position: relative;
     margin-top: 12;
     margin-bottom: 32px;
-    position: relative;
     @include flex-col;
     gap: 12px;
   }
@@ -97,10 +95,10 @@
 
 .sidebar {
   &-box {
-    overflow-y: scroll;
     width: 24vw;
+    overflow-y: scroll;
     padding-right: 20px;
-    height: 200vh;
+    height: 100vh;
     @include laptop {
       position: fixed;
       top: 0;
@@ -166,7 +164,6 @@
 // * Product
 .product-page {
   &-lists {
-    position: relative;
     @include grid(3);
     grid-gap: 64px 4%;
     @include table {

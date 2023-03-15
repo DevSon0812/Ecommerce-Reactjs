@@ -3,8 +3,8 @@ import { BsFilterLeft } from "react-icons/bs";
 
 import Sidebar from "../Sidebar";
 import TypeProducts from "./../TypeProducts";
-import imgSrc from "../../assets/img/pd1.avif";
 import ProductsPageItem from "../ProductsPageItem";
+import { dataProduct } from "./../../fakedata/data";
 
 const ProductsPage = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -32,51 +32,14 @@ const ProductsPage = () => {
         <div className="product-page-secound">
           <Sidebar open={openSidebar} close={handleCloseSidebar} />
           <div className="product-page-lists">
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
-            <ProductsPageItem
-              image={imgSrc}
-              name="501® Original Fit Women's Jeans"
-              price="$98.00 - $118.00"
-            />
+            {dataProduct.map((item) => (
+              <ProductsPageItem
+                key={item.id}
+                name={item.namePr}
+                image={item.image}
+                price={item.price}
+              />
+            ))}
           </div>
         </div>
       </div>

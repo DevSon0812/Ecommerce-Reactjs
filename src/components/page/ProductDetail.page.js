@@ -26,16 +26,42 @@ const displaySize = [
   },
 ];
 
+const displayBtn = [
+  {
+    id: 1,
+    methods: "Pickup In-Store",
+    description: "Select size to see if item in stock",
+  },
+  {
+    id: 2,
+    methods: "Ship",
+    description: "Select size to see if item in stock",
+  },
+];
+
 const ProductDetail = () => {
+  const [amount, setAmount] = useState(1);
   const [activeItemId, setActiveItemId] = useState(null);
-  // const [activeImgId, setActiveImg] = useState(1);
+  const [activeButtonId, setActiveButtonId] = useState(null);
 
   const handleItemClick = (itemId) => {
     setActiveItemId(itemId);
   };
-  // const hanldeItemClick = (itemId) => {
-  //   setActiveImg(itemId);
-  // };
+  const handleButtonClick = (btnId) => {
+    setActiveButtonId(btnId);
+  };
+
+  const increaseAmount = () => {
+    setAmount(amount + 1);
+  };
+  const reduceAmount = () => {
+    if (amount === 1) {
+      return;
+    } else {
+      setAmount(amount - 1);
+    }
+  };
+
   return (
     <section className="page-detail-group container">
       <div className="page-detail-box">
@@ -80,21 +106,30 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className="page-detail-payment">
-              <div className="page-detail-item">
-                <p>Pickup In-Store</p>
-                <span>Select size to see if item in stock</span>
-              </div>
-              <div className="page-detail-item">
-                <p>Ship</p>
-                <span>Select size to see if item in stock</span>
-              </div>
+              {displayBtn.map((item) => (
+                <div
+                  className={`page-detail-item ${
+                    activeButtonId === item.id ? "active-btn" : ""
+                  }`}
+                  key={item.id}
+                  onClick={() => handleButtonClick(item.id)}
+                >
+                  <p>{item.methods}</p>
+                  <span>{item.description}</span>
+                </div>
+              ))}
             </div>
             <div className="page-detail-btn">
               <button className="page-detail-btn-items">Add to Bag</button>
               <div className="page-detail-qty">
-                <div>-</div>
-                <div>1</div>
-                <div>+</div>
+                <div
+                  onClick={reduceAmount}
+                  className={amount === 1 ? "hide" : ""}
+                >
+                  -
+                </div>
+                <div>{amount}</div>
+                <div onClick={increaseAmount}>+</div>
               </div>
             </div>
             <div className="page-detail-bottom">

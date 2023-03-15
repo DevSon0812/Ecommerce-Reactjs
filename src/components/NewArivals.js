@@ -1,59 +1,22 @@
 import React from "react";
 import Product from "./Product";
-import imgProduct from "../assets/img/product0.jfif";
 import Title from "./Title";
+import { dataProduct } from "./../fakedata/data";
 
 const NewArivals = () => {
   return (
-    <section className="newarivals">
+    <section className="newarivals container">
       <Title className="newarivals-title">NEW ARRIALS</Title>
       {/* <h2 className="newarivals-title">NEW ARRIVAls</h2> */}
       <div className="product-list">
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
+        {dataProduct.map((item) => (
+          <Product
+            key={item.id}
+            name={item.namePr}
+            image={item.image}
+            price={item.price}
+          />
+        ))}
       </div>
     </section>
   );

@@ -1,58 +1,21 @@
 import React from "react";
-import imgProduct from "../assets/img/product0.jfif";
 import Title from "./Title";
 import Product from "./Product";
+import { dataProduct } from "./../fakedata/data";
 
 const Styles = () => {
   return (
-    <div>
+    <div className="container">
       <Title>STYLES YOU MAY LIKE</Title>
       <div className="product-list">
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
-        <Product
-          image={imgProduct}
-          name="Ex-Boyfriend Trucker Jacket"
-          price="$98.00"
-        />
+        {dataProduct.map((item) => (
+          <Product
+            key={item.id}
+            name={item.namePr}
+            image={item.image}
+            price={item.price}
+          />
+        ))}
       </div>
     </div>
   );
