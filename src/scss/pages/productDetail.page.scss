@@ -16,6 +16,7 @@
     justify-content: center;
     padding-bottom: 70px;
     border-bottom: 1px solid #e6e6e6;
+    gap: 30px;
     @include table {
       flex-direction: column;
       padding-bottom: 30px;
@@ -35,50 +36,46 @@
     }
   }
   &-detail-img-small {
-    @include flex-col;
-    gap: 32px;
-    height: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     @include table {
       flex-direction: row;
-      gap: 10px;
-    }
-    & div {
-      max-width: 120px;
-      height: 120px;
-      @include laptop {
-        max-width: 100px;
-        height: 100px;
-      }
-      @include table {
-        margin-top: 10px;
-      }
     }
   }
+
   &-detail-img {
-    position: relative;
+    @include flex-center-ver;
+    height: 700px;
     max-width: 100%;
     @include laptop {
       width: 450px;
-      height: 410px;
+      height: 450px;
     }
     @include table {
       width: 100%;
-      height: 100%;
-    }
-    & > img:last-child {
-      display: none;
-      @include table {
-        display: initial;
-      }
-    }
-    & > img:first-child {
-      @include table {
-        display: none;
-      }
+      height: 500px;
     }
   }
   &-detail-secound {
     width: 100%;
+  }
+  &-detail-icHeart {
+    cursor: pointer;
+    @include flex-center-ver;
+    justify-content: center;
+    background-color: #fff;
+    width: 50px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @include table {
+      display: none;
+    }
+    & > svg {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+    }
   }
   &-detail-desc {
     @include flex-col;
@@ -161,6 +158,24 @@
     gap: 22px;
     flex-wrap: wrap;
   }
+  &-detail-box-img {
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    max-width: 675px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include table {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+  }
+  &-detail-img-small {
+    & div {
+      width: 120px;
+      height: 120px;
+    }
+  }
   &-detail-item {
     cursor: pointer;
     width: calc(100% / 2 - 22px);
@@ -197,6 +212,7 @@
       flex-direction: column;
     }
     @include table {
+      padding-top: 100px;
       padding: 8px 12px;
       position: fixed;
       right: 0;
@@ -208,6 +224,7 @@
       z-index: 1000;
       gap: 4px;
       box-shadow: 0 2px 12px #00000040;
+      z-index: 100;
     }
   }
   &-detail-btn-items {
@@ -228,6 +245,7 @@
     &:hover {
       opacity: 0.9;
     }
+
     @include table {
       padding: 16px 16px;
     }
@@ -246,8 +264,24 @@
       justify-content: space-between;
       width: 25%;
       padding: 8px;
+      border-radius: $rounded-sm;
     }
-    & div:first-child {
+    & button {
+      display: none;
+      @include table {
+        cursor: pointer;
+        color: #fff;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 8px;
+        font-size: $font-size-2xl;
+      }
+    }
+    & div:nth-child(2) {
       &.hide {
         color: #ccc;
       }
@@ -259,12 +293,30 @@
       height: 40px;
       width: 40px;
       font-size: $font-size-large;
+      @include table {
+        display: none;
+      }
     }
   }
   &-detail-bottom {
     padding-block: 32px;
     font-size: 12px;
     line-height: 16px;
+  }
+  &-detail-quality {
+    margin-block: 32px;
+    gap: 20px;
+    display: none;
+    @include table {
+      @include flex-center-ver;
+    }
+    & > p {
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+    }
+    & > div {
+      font-size: $font-size-large;
+    }
   }
   &-detail-description {
     margin-top: 65px;
@@ -312,6 +364,9 @@
       font-weight: $font-weight-bold;
       line-height: $leading-6;
       margin-bottom: 9px;
+    }
+    & ul {
+      padding-left: 14px;
     }
     & ul > li {
       list-style: unset;

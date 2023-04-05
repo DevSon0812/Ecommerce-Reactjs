@@ -7,7 +7,7 @@ import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { ROUTES } from "./../utils/routes";
 
-const HeaderMobile = ({ onOpen }) => {
+const HeaderMobile = ({ onOpen, openModal }) => {
   const [openNav, SetOpenNav] = useState(false);
 
   const handleOpenNav = () => {
@@ -71,7 +71,9 @@ const HeaderMobile = ({ onOpen }) => {
           </ul>
           <div className="button-box header-mb-bottom">
             <Link className="button header-mb-link">Log in</Link>
-            <Link className="button header-mb-link">Sign Up</Link>
+            <Link className="button header-mb-link" onClick={openModal}>
+              Sign Up
+            </Link>
           </div>
         </nav>
       </div>

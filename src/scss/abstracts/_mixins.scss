@@ -67,3 +67,13 @@
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin visible {
+  opacity: 1;
+  visibility: visible;
+}

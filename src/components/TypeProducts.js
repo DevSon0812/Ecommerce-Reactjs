@@ -51,15 +51,15 @@ const TypeProducts = () => {
         <p>
           Clothing / <span>Woman</span>
         </p>
-        <h5 class="type-title">WOMEN'S CLOTHES</h5>
+        <h5 className="type-title">WOMEN'S CLOTHES</h5>
       </div>
       <div className="type-list">
         {displayTypeProducts.map((item) => (
-          <a href="/" class="type-item " key={item.id}>
-            <div class="type-img">
+          <a href="/" className="type-item " key={item.id}>
+            <div className="type-img">
               <img src={item.imgSrc} alt={item.nameType} />
             </div>
-            <h5 class="type-name">{item.nameType}</h5>
+            <h5 className="type-name">{item.nameType}</h5>
           </a>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import InputItem from "./InputItem";
+import Input from "./Input";
 import Logo from "./Logo";
 import { TbHeart } from "react-icons/tb";
 import { HiOutlineShoppingBag } from "react-icons/hi";
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Cart from "./Cart";
 import HeaderMobile from "./Header.mobile";
+import FormLogin from "../components/FormLogin";
 
 const Header = () => {
   // * handle open Bag Cart
@@ -20,16 +21,39 @@ const Header = () => {
   const handleCloseBag = () => {
     setOpenBagCart(false);
   };
+  // * handle open modal Form
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
 
   return (
     <>
-      <HeaderMobile onClose={handleCloseBag} onOpen={handleOpenBag} />
+      <FormLogin
+        openModal={openModal}
+        onHandleOpen={handleOpenModal}
+        onClose={handleCloseModal}
+      />
+      <HeaderMobile
+        onClose={handleCloseBag}
+        onOpen={handleOpenBag}
+        openModal={handleOpenModal}
+        closeModal={handleCloseModal}
+      />
       <div className="header-group">
         {/* Header */}
         <div className="button-group">
           <div className="button-box container">
             <Link className="button">Log in</Link>
-            <Link className="button">Sign Up</Link>
+            <Link className="button" onClick={handleOpenModal}>
+              Sign Up
+            </Link>
             <div className="location">
               <GrLocationPin size={12} />
               <p>United States</p>
@@ -43,7 +67,11 @@ const Header = () => {
           <div className="header-box">
             <div className="header-icon">
               <CgSearch size={22} />
-              <InputItem />
+              <Input
+                className="header-input"
+                type="text"
+                placeholder="What are you looking for?"
+              />
             </div>
             <div className="header-action ">
               <TbHeart size={24} />

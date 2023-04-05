@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import ProductDetail from "./components/page/ProductDetail.page";
 import ProductsPage from "./components/page/Products.page";
 import Contact from "./components/Contact";
-import FormLogin from "./components/FormLogin";
+import SignUpForm from "./components/FormLogin";
 
 function App() {
   useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.PRODUCT} element={<ProductsPage />} />
         <Route path={ROUTES.PRODUCT_DETAIL} element={<ProductDetail />} />
-        <Route path={ROUTES.sign.up} element={<FormLogin />} />
+        <Route path={ROUTES.sign.up} element={<SignUpForm />} />
       </Routes>
       <Contact />
       <Footer />

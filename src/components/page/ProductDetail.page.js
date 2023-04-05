@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import imgDetail from "../../assets/img/detail0.avif";
 import imgDetail2 from "../../assets/img/pd2.avif";
 import Styles from "./../Styles";
+import { TbHeart } from "react-icons/tb";
+
+// or only core styles
 
 const displaySize = [
   {
@@ -62,27 +64,59 @@ const ProductDetail = () => {
     }
   };
 
+  const img = [
+    {
+      id: 1,
+      image: `${imgDetail2}`,
+    },
+    {
+      id: 2,
+      image: `${imgDetail2}`,
+    },
+    {
+      id: 3,
+      image: `${imgDetail2}`,
+    },
+    {
+      id: 4,
+      image: `${imgDetail2}`,
+    },
+    {
+      id: 5,
+      image: `${imgDetail2}`,
+    },
+    // {
+    //   id: 6,
+    //   image: `${imgDetail2}`,
+    // },
+    // {
+    //   id: 7,
+    //   image: `${imgDetail2}`,
+    // },
+    // {
+    //   id: 8,
+    //   image: `${imgDetail2}`,
+    // },
+  ];
+
   return (
     <section className="page-detail-group container">
       <div className="page-detail-box">
         <div className="page-detail-primary">
-          <div className="page-detail-img-small">
-            <div>
+          <div className="page-detail-box-img">
+            <div className="page-detail-img-small">
+              {img.map((item) => (
+                <div key={item.id}>
+                  <img src={item.image} alt="" />
+                </div>
+              ))}
+            </div>
+            <div className="page-detail-img">
               <img src={imgDetail2} alt="" />
             </div>
-            <div>
-              <img src={imgDetail2} alt="" />
+            <div className="page-detail-icHeart">
+              <TbHeart />
             </div>
-            <div>
-              <img src={imgDetail2} alt="" />
-            </div>
-            <div>
-              <img src={imgDetail2} alt="" />
-            </div>
-          </div>
-          <div className="page-detail-img">
-            <img src={imgDetail} alt="" />
-            <img src={imgDetail2} alt="" />
           </div>
         </div>
         <div className="page-detail-secound">
@@ -105,6 +139,17 @@ const ProductDetail = () => {
                 ))}
               </div>
             </div>
+            <div className="page-detail-quality">
+              <p>Quatity:</p>
+              <div
+                onClick={reduceAmount}
+                className={amount === 1 ? "hide" : ""}
+              >
+                -
+              </div>
+              <div>{amount}</div>
+              <div onClick={increaseAmount}>+</div>
+            </div>
             <div className="page-detail-payment">
               {displayBtn.map((item) => (
                 <div
@@ -122,6 +167,9 @@ const ProductDetail = () => {
             <div className="page-detail-btn">
               <button className="page-detail-btn-items">Add to Bag</button>
               <div className="page-detail-qty">
+                <button>
+                  <TbHeart />
+                </button>
                 <div
                   onClick={reduceAmount}
                   className={amount === 1 ? "hide" : ""}
