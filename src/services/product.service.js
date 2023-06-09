@@ -4,7 +4,7 @@ export const product = {
   getProducts: (params) =>
     http.request({
       method: "GET",
-      url: "/products",
+      url: "products",
       params: {
         ...params,
       },

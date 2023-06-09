@@ -15,6 +15,7 @@ const ProductsPage = () => {
   const handleCloseSidebar = () => {
     setOpenSidebar(false);
   };
+
   return (
     <>
       <TypeProducts />
@@ -35,7 +36,7 @@ const ProductsPage = () => {
             {dataProduct.map((item) => (
               <ProductsPageItem
                 key={item.id}
-                name={item.namePr}
+                name={item.name}
                 image={item.image}
                 price={item.price}
               />

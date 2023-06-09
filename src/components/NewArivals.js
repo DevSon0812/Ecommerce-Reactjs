@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./Product";
 import Title from "./Title";
 import { dataProduct } from "./../fakedata/data";
-
+// Default theme
 const NewArivals = () => {
   return (
     <section className="newarivals container">
@@ -12,7 +12,7 @@ const NewArivals = () => {
         {dataProduct.map((item) => (
           <Product
             key={item.id}
-            name={item.namePr}
+            name={item.name}
             image={item.image}
             price={item.price}
           />

@@ -14,7 +14,7 @@ const schema = yup
   })
   .required();
 
-export default function Login({ openModalLogin, setCloseModalLogin }) {
+export default function SignUp({ openModal, onClose }) {
   const {
     register,
     handleSubmit,
@@ -28,21 +28,35 @@ export default function Login({ openModalLogin, setCloseModalLogin }) {
   const onSubmit = (data) => console.log(data);
   return (
     <section className="form">
-      <div className={`form-overlay ${openModalLogin ? "showModal-Form" : ""}`}>
-        <div className="form-box grid-1">
+      <div className={`form-overlay ${openModal ? "showModal-Form" : ""}`}>
+        <div className="form-box">
           <div className="form-ic">
-            <GrClose onClick={setCloseModalLogin} />
+            <GrClose onClick={onClose} />
+          </div>
+          <div className="form-left">
+            <h4 className="form-title">
+              Sonw <span>Khan's</span>
+            </h4>
+            <p className="form-content">
+              JOIN OUR RED TAB™ PROGRAM AND GET FREE SHIPPING ON EVERY ORDER.
+            </p>
+            <p className="form-decription">
+              Sign up for Levi’s® Red Tab™ to get exclusive access to products,
+              events, and offers. Just provide a few details. It’s free to join
+              and open to all.
+            </p>
           </div>
           <form className="form-right" onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-left">
-              <h4 className="form-title">
-                Sonw <span>Khan's</span>
-              </h4>
-              <p className="form-content">
-                JOIN OUR RED TAB™ PROGRAM AND GET FREE SHIPPING ON EVERY ORDER.
-              </p>
+            <div className="form-item">
+              <label htmlFor="firstName">First Name*</label>
+              <input id="firstName" {...register("firstName")} />
+              <p className="form-error">{errors.firstName?.message}</p>
             </div>
-
+            <div className="form-item">
+              <label htmlFor="lastName">Last Name*</label>
+              <input {...register("lastName")} />
+              <p className="form-error">{errors.lastName?.message}</p>
+            </div>
             <div className="form-item">
               <label htmlFor="email">Email*</label>
               <input {...register("email")} />
@@ -74,7 +88,7 @@ export default function Login({ openModalLogin, setCloseModalLogin }) {
               <a href="/" className="form-link">
                 Member Program Terms and Conditions
               </a>
-              . I have read the
+              . I have read the{" "}
               <a href="/" className="form-link">
                 LS&Co. Privacy Policy
               </a>

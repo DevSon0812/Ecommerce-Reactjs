@@ -1,0 +1,110 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/858330034-dynamic1-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=369&hei=492",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 2,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/563270086-dynamic1-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=369&hei=492",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 2,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/726930012-mktg1-pdp-lse?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=369&hei=492",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 4,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/A19620009-dynamic1-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=369&hei=492",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 5,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/A34720003-front-pdp-lse?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=492&hei=656",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 6,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/588250120-dynamic1-pdp-lse?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=492&hei=656",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 7,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/A42390001-dynamic1-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=492&hei=656",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 8,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/A49360000-dynamic1-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=492&hei=656",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 9,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/A32350005-front-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=492&hei=656",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 10,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "https://lsco.scene7.com/is/image/lsco/A37240007-dynamic1-pdp?fmt=avif&qlt=40&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=492&hei=656",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 11,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "typicode",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 12,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "typicode",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 13,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "typicode",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 14,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "typicode",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 15,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "typicode",
+      "price": "$98.00 - $118.00"
+    },
+    {
+      "id": 16,
+      "name": "501® Original Fit Women's Jeans",
+      "image": "typicode",
+      "price": "$98.00 - $118.00"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

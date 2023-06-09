@@ -11,7 +11,7 @@ const Styles = () => {
         {dataProduct.map((item) => (
           <Product
             key={item.id}
-            name={item.namePr}
+            name={item.name}
             image={item.image}
             price={item.price}
           />

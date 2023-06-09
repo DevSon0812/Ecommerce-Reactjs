@@ -9,12 +9,15 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Cart from "./Cart";
 import HeaderMobile from "./Header.mobile";
-import FormLogin from "../components/FormLogin";
+import SignUp from "./FormSingup";
+import Login from "./FormLogin";
 
 const Header = () => {
-  // * handle open Bag Cart
   const [openBagCart, setOpenBagCart] = useState(false);
-
+  const [openModalSignUp, setOpenModalSignup] = useState(false);
+  const [openModalLogin, setOpenModalLogin] = useState(false);
+  
+  // * handle open Bag Cart
   const handleOpenBag = () => {
     setOpenBagCart(true);
   };
@@ -23,22 +26,33 @@ const Header = () => {
   };
   // * handle open modal Form
 
-  const [openModal, setOpenModal] = useState(false);
 
   const handleOpenModal = () => {
-    setOpenModal(true);
+    setOpenModalSignup(true);
   };
 
   const handleCloseModal = () => {
-    setOpenModal(false);
+    setOpenModalSignup(false);
+  };
+  const handleOpenModalLogin = () => {
+    setOpenModalLogin(true);
+  };
+
+  const handleCloseModalLogin = () => {
+    setOpenModalLogin(false);
   };
 
   return (
     <>
-      <FormLogin
-        openModal={openModal}
+      <SignUp
+        openModal={openModalSignUp}
         onHandleOpen={handleOpenModal}
         onClose={handleCloseModal}
+      />
+      <Login
+        openModalLogin={openModalLogin}
+        setOpenModalLogin={handleOpenModalLogin}
+        setCloseModalLogin={handleCloseModalLogin}
       />
       <HeaderMobile
         onClose={handleCloseBag}
@@ -50,7 +64,9 @@ const Header = () => {
         {/* Header */}
         <div className="button-group">
           <div className="button-box container">
-            <Link className="button">Log in</Link>
+            <Link className="button" onClick={handleOpenModalLogin}>
+              Log in
+            </Link>
             <Link className="button" onClick={handleOpenModal}>
               Sign Up
             </Link>
